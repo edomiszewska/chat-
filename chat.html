@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    
+        <header>
+    <h2>Chat</h2>
+        </header>
+
+        <main>
+            <section id="chat">
+           <article class="jola">
+            <img src="Jolka.jpg" alt="Jolanta Nowak">
+            <p>Cześć idziesz jutro do
+                kina?</p>
+           </article>
+
+
+           <article class="krzys">
+            <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+            <p>Tak! A ty?</p>
+           </article>
+            </section>
+
+           Wpisz wiadomość <input type="text" name="tekst" id="tekst" class="text">
+           <button id="wyslij" name="wyslij">Wyślij</button><br>
+           <button id="generuj" name="generuj">Generuj losową odpowiedź</button>
+        </main>
+
+        <aside id="boczny"><h3>Chaty</h3>
+            <ul><li>Ogólny</li>
+            <li>Tematyczne</li>
+        
+        <ol><li>Turystyczny</li>
+            <li>Żeglarski</li>
+            <li>Filatelistyczny</li>
+        <li>Hodowla zwierzątek
+            domowych</li></ol></ul>
+
+            <h3>Uczestnicy</h3>
+            <p>Jolanta Nowak</p>
+            <img src="Jolka.jpg" alt="Jolanta Nowak">
+
+            <p>Krzysztof Łukasiński</p>
+            <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+
+        </aside>
+
+        <footer>
+            <h5>Chat wykonał nr 7</h5>
+        </footer>
+
+  
+<script>
+const przy1=document.querySelector('#wyslij')
+const przy2=document.querySelector('#generuj')
+const tekst=document.querySelector('#tekst')
+
+przy1.addEventListener('click', (evt)=>{
+    el=document.createElement('article')
+
+    el.innerHTML=`<img src="Jolka.jpg" alt="Jolanta Nowak">
+            <p>${tekst.value} </p>`
+      const chat=document.querySelector('#chat')  
+
+      chat.appendChild(el)
+    el.classList.add('jola')
+    el.scrollIntoView()
+})
+
+przy2.addEventListener('click',(evt)=>{
+const tablica=["Świetnie!",
+"Kto gra główną rolę?",
+"Lubisz filmy Tego reżysera?",
+"Będę 10 minut wcześniej",
+"Może kupimy sobie popcorn?",
+"Ja wolę Colę",
+"Zaproszę jeszcze Grześka",
+"Tydzień temu też byłem w kinie na Diunie",
+"Ja funduję bilety"]
+
+el=document.createElement('article')
+   
+    let liczba= Math.round(Math.random()*8)
+    el.innerHTML=`<img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+            <p>${tablica[liczba]} </p>`
+      const chat=document.querySelector('#chat')  
+
+      chat.appendChild(el)
+    el.classList.add('krzys')
+    el.scrollIntoView()
+
+
+})
+
+
+</script>
+
+
+</body>
+</html>

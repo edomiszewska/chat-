@@ -1,0 +1,108 @@
+body *{
+font-family: Garamond;
+
+
+
+
+
+}
+
+body{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: 
+    'header aside'
+    'main aside'
+    'footer footer';
+
+}
+
+header{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+    grid-area: header;
+   
+}
+
+main{
+    width: 80%;
+    height: 600px;
+    grid-area: main;
+    
+}
+
+aside{
+    background-color: Coral;
+    width: 20%;
+    height: 680px;
+     grid-area: aside;
+ 
+    
+}
+
+header, main, aside{
+width: 100%;
+
+}
+
+footer{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    grid-area: footer;
+    
+}
+
+img{
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+ 
+}
+
+section{
+    border: 1px solid tomato;
+    margin: 15px;
+    height: 470px;
+    overflow: scroll;
+   
+
+}
+article{
+    
+border-radius: 5px;
+width: 90%;
+height: 70px;
+margin: 2%;
+padding: 3px;
+}
+
+
+.jola{
+    background-color: #eee;
+    text-align: left;
+   
+}
+.jola>img{
+    float: left;
+}
+.krzys{
+background-color: #CCC;
+text-align: right;
+}
+
+.krzys>img{
+    float: right;
+}
+button{
+    background-color: tomato;
+    border: solid 1px darkred;
+
+}
+
+.text{
+    width: 500px;
+}
